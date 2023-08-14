@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19717b9b925e1b4b91a6483484c9a17, type: 3}
+  m_Name: FirstCharacterTest
+  m_EditorClassIdentifier: 
+  Name: Nameless
+  gender: 0
+  portraits:
+    normal: {fileID: 0}
+    surprised: {fileID: 0}
+    confused: {fileID: 0}
+    angry: {fileID: 0}
+  characterPrefab: {fileID: 0}
+  canBeRomanced: 0
+  romancableGender: 0
+  itemLikes: []
+  itemDislikes: []
+  generalDialogues:
+  - {fileID: 11400000, guid: 311662877a33b694ba8fcc369b87c019, type: 2}
+  - {fileID: 11400000, guid: 0d35fc399ca3f7449849f9c9589ce1d3, type: 2}
+  schedule: 
