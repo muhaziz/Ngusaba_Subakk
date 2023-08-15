@@ -129,4 +129,16 @@ public class ItemContainer : ScriptableObject
 
         return true;
     }
+
+    internal bool CheckItem(Item item, int count)
+    {
+        ItemSlot itemSlot = slots.Find(x => x.item == item);
+
+        if (itemSlot == null) { return false; }
+
+        if (item.stackable) { return itemSlot.count >= count; } // Memeriksa apakah pemain memiliki lebih dari atau sama dengan 'count' dari item tertentu
+
+        return true; // Jika item tidak stackable dan ada di inventory, kembalikan true
+    }
+
 }
