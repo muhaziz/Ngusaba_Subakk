@@ -21,8 +21,7 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] IconHighlight iconHighlight;
     AttackController attackController;
     [SerializeField] int weaponEnergyCost = 5;
-    public CraftingSystem craftingSystem;
-
+   
     Vector3Int selectedTilePosition;
     bool selectable;
 
