@@ -20,12 +20,11 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -64,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -77,7 +75,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -90,7 +87,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -103,7 +99,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -116,7 +111,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2832,7 +2826,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tebing_Bawah_Goa
+      name: Tebing_atas_Goa
       rect:
         serializedVersion: 2
         x: 112
@@ -3066,7 +3060,7 @@ TextureImporter:
       name: tebing_atas kanan
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 368
         width: 16
         height: 16
@@ -4386,132 +4380,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_574
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6dc427be75e39340994edd61a2514ad
-      internalID: 93853640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_575
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dda386c9cb116744a26c4602c64e1a0
-      internalID: -1333520251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_576
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d27c69b05d8e7746bf429c0954bd8d7
-      internalID: -835746324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_577
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9123346c990744a44b03bd9ecc595cd8
-      internalID: 882188020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_578
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: deca987489f7a1140ab56dca808a727d
-      internalID: 1970528593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_579
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2644256a6a7c1714e9f203523696f380
-      internalID: 1661315049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Overworld_580
       rect:
         serializedVersion: 2
@@ -4638,69 +4506,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_595
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 442fdb6e654bcc24e8266e6ab199fa6d
-      internalID: 1458159807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_596
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10ac2cdc8e896d7428527c1824722e28
-      internalID: 33200901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_597
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7c0541799f8e9745a55311e0467db3c
-      internalID: 1056336091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: airterjun_ataskiri
       rect:
         serializedVersion: 2
@@ -4743,69 +4548,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_630
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1023aa5f0ac03984b8ab3f5c7b25b7cf
-      internalID: -1455035667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_631
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0868662d1b8e558449bde7051dffb7a4
-      internalID: -1406631676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_632
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47c54c122000d1c479ddd08454d519e2
-      internalID: 308209440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Overworld_633
       rect:
         serializedVersion: 2
@@ -4827,7 +4569,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: airterjun_atas2kiri
+      name: airterjun_ataskiri2
       rect:
         serializedVersion: 2
         x: 144
@@ -4848,7 +4590,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: airterjun_atas2kanan
+      name: airterjun_ataskanan2
       rect:
         serializedVersion: 2
         x: 160
@@ -4869,70 +4611,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_666
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89f13a3c5f1cf444c8d6fa61777ab567
-      internalID: 559667542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_667
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1d687e389092764d99673bff364b55e
-      internalID: 269900524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_668
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7927ab218cb0cda45afb438bcffff0bd
-      internalID: 717408454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_669
+      name: Air_TebingAir_KIriBAwah
       rect:
         serializedVersion: 2
         x: 96
@@ -4953,7 +4632,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_670
+      name: Air_TebingAir_KananBAwah
       rect:
         serializedVersion: 2
         x: 112
@@ -4995,7 +4674,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: airterjun_atas3kiri
+      name: airterjun_ataskiri3
       rect:
         serializedVersion: 2
         x: 144
@@ -5016,7 +4695,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: airterjun_atas3kanan
+      name: airterjun_ataskanan3
       rect:
         serializedVersion: 2
         x: 160
@@ -6654,7 +6333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rumput_Kosong
+      name: Rumput_Kosong1
       rect:
         serializedVersion: 2
         x: 208
@@ -6846,7 +6525,7 @@ TextureImporter:
       name: Rumput_Serong_Kiri_Atas_Tanah
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 96
         width: 16
         height: 16
@@ -6906,7 +6585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rumput_Serong_kiri_Bawah_RumputKosong2
+      name: Rumput_Serong_KIri_Atas_RumputKosong2
       rect:
         serializedVersion: 2
         x: 224
@@ -6969,7 +6648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_962
+      name: RumputGelap1
       rect:
         serializedVersion: 2
         x: 272
@@ -6990,7 +6669,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_963
+      name: RumputGelap2
       rect:
         serializedVersion: 2
         x: 288
@@ -7242,7 +6921,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_985
+      name: RumputGelap3
       rect:
         serializedVersion: 2
         x: 272
@@ -7263,7 +6942,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_986
+      name: RumputGelap4
       rect:
         serializedVersion: 2
         x: 288
@@ -7473,7 +7152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rumput_Bawah_RumputKosong
+      name: Rumput_Bawah_RumputKosong2
       rect:
         serializedVersion: 2
         x: 240
@@ -7956,7 +7635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RumputKosong_Serong_Kanan_Bawah_RumpuRumputKosong_Serong_Kiri_Bawah_RumputRumputKosong_Serong_Kiri_Bawah_Rumputt
+      name: RumputKosong_Serong_Kanan_Bawah
       rect:
         serializedVersion: 2
         x: 240
@@ -8391,6 +8070,8 @@ TextureImporter:
       Air_Serong_Kanan_Bawah_Rumput: -276389563
       Air_Serong_Kiri_Atas_Rumput: 1361879122
       Air_Serong_Kiri_Bawah_Rumput: 79717283
+      Air_TebingAir_KIriBAwah: -1041860104
+      Air_TebingAir_KananBAwah: 552174562
       Anim_Air_Lobang_1: -1727847683
       Anim_Air_Lobang_2: 1176739241
       Anim_Air_Lobang_3: 1654420147
@@ -8414,6 +8095,7 @@ TextureImporter:
       Base Rumput: 510869535
       Base_Tanah: -1586267170
       Goa: -882284797
+      Overworld_0: -1707603898
       Overworld_10: 1686143301
       Overworld_100: -1163451837
       Overworld_1000: 885170418
@@ -9002,9 +8684,7 @@ TextureImporter:
       Overworld_666: 269900524
       Overworld_667: 717408454
       Overworld_668: -1041860104
-      Overworld_669: -1776551971
       Overworld_67: 552174562
-      Overworld_670: -263445372
       Overworld_671: -1233279706
       Overworld_674: 1503236282
       Overworld_675: -804152421
@@ -9300,8 +8980,6 @@ TextureImporter:
       Overworld_957: -557649130
       Overworld_958: 1402004515
       Overworld_96: 1336632557
-      Overworld_962: -1983848941
-      Overworld_963: -1654522452
       Overworld_964: 793393256
       Overworld_965: 1005172931
       Overworld_966: 464990501
@@ -9319,8 +8997,6 @@ TextureImporter:
       Overworld_98: -1266821388
       Overworld_980: 782780959
       Overworld_981: -399576175
-      Overworld_985: -260136525
-      Overworld_986: 1574596840
       Overworld_987: 1489723862
       Overworld_988: -1770764273
       Overworld_989: 493028732
@@ -9334,9 +9010,13 @@ TextureImporter:
       Overworld_999: 116346010
       Rumput1: 1757391813
       Rumput4: -479763281
+      RumputGelap1: -1848545527
+      RumputGelap2: -1983848941
+      RumputGelap3: 311382666
+      RumputGelap4: -260136525
       RumputKosong: 571444440
       RumputKosong_Serong_Kanan_Atas_Rumput: -2037132223
-      RumputKosong_Serong_Kanan_Bawah_RumpuRumputKosong_Serong_Kiri_Bawah_RumputRumputKosong_Serong_Kiri_Bawah_Rumputt: -425081309
+      RumputKosong_Serong_Kanan_Bawah: -425081309
       RumputKosong_Serong_Kiri_Atas_Rumput: -1212158227
       RumputKosong_Serong_Kiri_Bawah_Rumput: -2079945751
       Rumput_2: -242153942
@@ -9345,7 +9025,7 @@ TextureImporter:
       Rumput_Atas_RumputKosong3: 1466062008
       Rumput_Atas_Tanah: -58687364
       Rumput_Bawah_Air: 2034166932
-      Rumput_Bawah_RumputKosong: 926483192
+      Rumput_Bawah_RumputKosong2: 926483192
       Rumput_Bawah_RumputKosong3: -271099893
       Rumput_Kanan_Air: -508772417
       Rumput_Kanan_RumputKosong: 1322269243
@@ -9353,7 +9033,8 @@ TextureImporter:
       Rumput_Kiri_RumputKosong: 1323473352
       Rumput_Kiri_RumputKosong2: 524802910
       Rumput_Kiri_Tanah: 119933397
-      Rumput_Kosong: 1237948301
+      Rumput_Kosong1: 1237948301
+      Rumput_Serong_KIri_Atas_RumputKosong2: 1402004515
       Rumput_Serong_Kanan_Atas_Air: -1583307188
       Rumput_Serong_Kanan_Atas_Kosong: -1910915466
       Rumput_Serong_Kanan_Atas_RumputKosong2: 13582937
@@ -9378,7 +9059,6 @@ TextureImporter:
       Rumput_Serong_Kiri_bawah_Kosong: -1171093870
       Rumput_Serong_kiri_Atas_Kosong: 794198219
       Rumput_Serong_kiri_Atas_RumputKosong3: -986393326
-      Rumput_Serong_kiri_Bawah_RumputKosong2: 1402004515
       Rumput_Serong_kiri_Bawah_RumputKosong3: 46322316
       Rumput_atas_RumputKosong2: 1336632557
       Rumput_bawah_Tanah: 1519437203
@@ -9391,87 +9071,89 @@ TextureImporter:
       Tanah_Serong_Kanan_Bawah_Rumput: 1052769559
       Tanah_Serong_Kiri_Atas_Rumput: 896054148
       Tanah_Serong_Kiri_Bawah_Rumput: 1571986278
+      Tangga: 820647502
       TebingHancur: -1075695154
-      Tebing_Bawah_Goa: 2014380473
+      Tebing_atas_Goa: 2014380473
       airterjun_atas kanan: 714690123
       airterjun_atas1: -808387373
       airterjun_atas2: -1532278529
-      airterjun_atas2kanan: 1369741438
-      airterjun_atas2kiri: 1355112709
       airterjun_atas3: -1202324185
-      airterjun_atas3kanan: -395619826
-      airterjun_atas3kiri: -1233279706
-      airterjun_ataskiri: 834343715
-      airterjun_bawah1: 544833914
-      airterjun_bawah2: 1689749414
-      airterjun_bawah3: -1498433234
-      airterjun_bawahkanan: 1277583546
-      airterjun_bawahkiri: 700659865
-      airterjun_dasarkanan1: -661950042
-      airterjun_dasarkanan2: 1404091861
-      airterjun_dasarkanan3: -446823318
-      airterjun_dasarkiri1: 852928813
-      airterjun_dasarkiri2: 1063301663
-      airterjun_dasarkiri3: 178766482
-      airterjun_dasartengah1: -662688105
-      airterjun_dasartengah2: -2030285992
-      airterjun_dasartengah3: -1564922167
-      airterjun_tengah1: -15573208
-      airterjun_tengah2: 2145316547
-      airterjun_tengah3: -1640764008
-      bayanganbukit_1: 709700958
-      bayanganbukit_2: 1858646476
-      bayanganbukit_3: 728139438
-      bayanganbukit_4: 1304277774
-      jembatan_horizontal: -1691617504
-      jembatan_vertikal: 1584683882
-      kursi_hadapatas: -2124858797
-      kursi_hadapbawah: 662014878
-      kursi_hadapkanan: -959036010
-      kursi_hadapkiri: -1360970008
-      rumput2_kananatas: 628155227
-      rumput2_kananbawah: 225388937
-      rumput2_kanandalam: 489306685
-      rumput2_kanandalambawah: 1125350839
-      rumput2_kanantengah: 519188869
-      rumput2_kiriatas: -1336466478
-      rumput2_kiribawah: -2016915685
-      rumput2_kiridalam: -53958175
-      rumput2_kiridalambawah: -823462178
-      rumput2_kiritengah: -1592745685
-      rumput2_tengahatas: -991120118
-      rumput2_tengahbawah: 33843554
-      rumput2_tengahtengah: 519188869
-      rumputairterjun_kanan: 410222250
-      rumputairterjun_kiri: -353816641
-      tebing_atas kanan: 1306826401
-      tebing_atas kiri: 2118870680
-      tebing_atas tengah: 1911630354
-      tebing_bawah kanan: 134721741
-      tebing_bawah kiri: 53873815
-      tebing_bawah tengaj: 928328059
-      tebing_kosong kanan: 1269592044
-      tebing_kosong kiri: -597934971
-      tebing_kosong tengah: -2025349374
-      tebing_rumput atas kanan: 518888462
-      tebing_rumput atas kiri: 358287271
-      tebing_rumput atas tengah: 691884433
-      tebing_rumput bawah kanan: -2071305301
-      tebing_rumput bawah kiri: -144287783
-      tebing_rumput bawah tengah: 1649343194
-      tebing_rumput tengah kanan: -30424153
-      tebing_rumput tengah kiri: -286541639
-      tebing_rumput tengah tengah: 917226468
-      tebing_tengah kanan: 1610247163
-      tebing_tengah kiri: -298350462
-      tebing_tengah tengah: 2088283650
-      tebingair_kananbawah: 571909211
-      tebingair_kiribawah: 722274017
-      tebingair_pojokkanan: -1917075491
-      tebingair_pojokkiri: -2092833126
-      tebingair_tengahbawah: 184431506
-  mipmapLimitGroupName: 
+      airterjun_ataskanan2: -1233279706
+      airterjun_ataskanan3: -395619826
+      airterjun_ataskiri: 544833914
+      airterjun_ataskiri2: 1369741438
+      airterjun_ataskiri3: -395619826
+      airterjun_bawah1: 1689749414
+      airterjun_bawah2: -1498433234
+      airterjun_bawah3: 1277583546
+      airterjun_bawahkanan: 700659865
+      airterjun_bawahkiri: -661950042
+      airterjun_dasarkanan1: 1404091861
+      airterjun_dasarkanan2: -446823318
+      airterjun_dasarkanan3: 852928813
+      airterjun_dasarkiri1: 1063301663
+      airterjun_dasarkiri2: 178766482
+      airterjun_dasarkiri3: -662688105
+      airterjun_dasartengah1: -2030285992
+      airterjun_dasartengah2: -1564922167
+      airterjun_dasartengah3: -15573208
+      airterjun_tengah1: 2145316547
+      airterjun_tengah2: -1640764008
+      airterjun_tengah3: 709700958
+      bayanganbukit_1: 1858646476
+      bayanganbukit_2: 728139438
+      bayanganbukit_3: 1304277774
+      bayanganbukit_4: -1691617504
+      jembatan_horizontal: 1584683882
+      jembatan_vertikal: -2124858797
+      kursi_hadapatas: 662014878
+      kursi_hadapbawah: -959036010
+      kursi_hadapkanan: -1360970008
+      kursi_hadapkiri: 628155227
+      rumput2_kananatas: 225388937
+      rumput2_kananbawah: 489306685
+      rumput2_kanandalam: 1125350839
+      rumput2_kanandalambawah: 519188869
+      rumput2_kanantengah: -1336466478
+      rumput2_kiriatas: -2016915685
+      rumput2_kiribawah: -53958175
+      rumput2_kiridalam: -823462178
+      rumput2_kiridalambawah: -1592745685
+      rumput2_kiritengah: -991120118
+      rumput2_tengahatas: 33843554
+      rumput2_tengahbawah: 519188869
+      rumput2_tengahtengah: 410222250
+      rumputairterjun_kanan: -353816641
+      rumputairterjun_kiri: 1306826401
+      tebing_atas kanan: 2118870680
+      tebing_atas kiri: 1911630354
+      tebing_atas tengah: 134721741
+      tebing_bawah kanan: 53873815
+      tebing_bawah kiri: 928328059
+      tebing_bawah tengaj: 1269592044
+      tebing_kosong kanan: -597934971
+      tebing_kosong kiri: -2025349374
+      tebing_kosong tengah: 518888462
+      tebing_rumput atas kanan: 358287271
+      tebing_rumput atas kiri: 691884433
+      tebing_rumput atas tengah: -2071305301
+      tebing_rumput bawah kanan: -144287783
+      tebing_rumput bawah kiri: 1649343194
+      tebing_rumput bawah tengah: -30424153
+      tebing_rumput tengah kanan: -286541639
+      tebing_rumput tengah kiri: 917226468
+      tebing_rumput tengah tengah: 1610247163
+      tebing_tengah kanan: -298350462
+      tebing_tengah kiri: 2088283650
+      tebing_tengah tengah: 571909211
+      tebingair_kananbawah: 722274017
+      tebingair_kiribawah: -1917075491
+      tebingair_pojokkanan: -2092833126
+      tebingair_pojokkiri: 184431506
+      tebingair_tengahbawah: 1355112709
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
