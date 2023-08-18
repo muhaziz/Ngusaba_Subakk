@@ -17,17 +17,20 @@ public class ItemContainerInteractController : MonoBehaviour
 
     private void Update()
     {
-        if(openedChest != null) 
+        if (openedChest != null)
         {
             float distance = Vector2.Distance(openedChest.position, transform.position);
-            if (distance > maxDistance) 
+            Debug.Log("Distance to chest: " + distance); // Ini akan menunjukkan jarak ke chest di Console
+
+            if (distance > maxDistance)
             {
-                openedChest.GetComponent<LootContainerInteract>().Close(GetComponent<Character>());
+                Debug.Log("Closing Chest UI due to distance."); // Ini akan muncul di Console saat kondisi terpenuhi
+                GetComponent<InventoryController>().CloseChestUI();
             }
         }
     }
 
-    public void Open(ItemContainer itemContainer, Transform _openedChest) 
+    public void Open(ItemContainer itemContainer, Transform _openedChest)
     {
         targetItemContainer = itemContainer;
         itemContainerPanel.inventory = targetItemContainer;
@@ -36,7 +39,7 @@ public class ItemContainerInteractController : MonoBehaviour
         openedChest = _openedChest;
     }
 
-    public void Close() 
+    public void Close()
     {
         inventoryController.Close();
         itemContainerPanel.gameObject.SetActive(false);

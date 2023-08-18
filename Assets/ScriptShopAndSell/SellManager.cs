@@ -13,7 +13,7 @@ public class SellManager : MonoBehaviour
     private void Start()
     {
         player = GameManager.instance.player1;
-        Debug.Log($"Referensi Pemain: {player}");
+        //  Debug.Log($"Referensi Pemain: {player}");
         PopulateSellItems();
     }
 

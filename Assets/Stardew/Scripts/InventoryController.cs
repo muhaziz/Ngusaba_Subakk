@@ -10,6 +10,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField] GameObject ChestPanel;
     [SerializeField] GameObject storePanel;
     [SerializeField] GameObject SellPanel;
+    [SerializeField] private GameObject chestUI;
 
     private void Update()
     {
@@ -43,4 +44,15 @@ public class InventoryController : MonoBehaviour
         ChestPanel.SetActive(false);
         storePanel.SetActive(false);
     }
+
+    public void OpenChestUI()
+    {
+        chestUI.SetActive(true);
+    }
+
+    public void CloseChestUI()
+    {
+        chestUI.SetActive(false);
+    }
+
 }

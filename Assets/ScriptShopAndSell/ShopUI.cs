@@ -26,9 +26,9 @@ public class ShopUI : MonoBehaviour
     }
     public void Setup(ItemSale newItem, Player playerReference)
     {
-        Debug.Log($"Item: {newItem}");
-        Debug.Log($"Player: {playerReference}");
-        Debug.Log($"Item Icon: {itemIcon}");
+        // Debug.Log($"Item: {newItem}");
+        // Debug.Log($"Player: {playerReference}");
+        // Debug.Log($"Item Icon: {itemIcon}");
         item = newItem;
         player = playerReference;
 
