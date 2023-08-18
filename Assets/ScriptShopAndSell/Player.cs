@@ -17,8 +17,12 @@ public class Player : MonoBehaviour
 
     public void UpdateMoneyUI()
     {
+
         if (playerMoneyText)
-            playerMoneyText.text = Money.ToString();
+        {
+            playerMoneyText.text = string.Format("Rp. {0:N0}", Money);
+        }
+
 
     }
 

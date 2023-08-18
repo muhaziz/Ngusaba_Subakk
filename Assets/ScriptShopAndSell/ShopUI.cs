@@ -52,7 +52,7 @@ public class ShopUI : MonoBehaviour
     void UpdateUI()
     {
         quantityText.text = selectedQuantity.ToString();
-        priceText.text = (item.price * selectedQuantity).ToString();
+        priceText.text = string.Format("Rp. {0:N0}", item.price * selectedQuantity);
     }
 
     void BuyItem()

@@ -50,7 +50,7 @@ public class ItemSell : MonoBehaviour
     void UpdateUI()
     {
         quantityText.text = selectedQuantity.ToString();
-        priceText.text = (item.price * selectedQuantity).ToString(); // Asumsi ini adalah harga beli. Anda mungkin perlu menyesuaikan ini jika harga jual berbeda dari harga beli.
+        priceText.text = string.Format("Rp. {0:N0}", item.price * selectedQuantity);
     }
 
     void SellItem()
