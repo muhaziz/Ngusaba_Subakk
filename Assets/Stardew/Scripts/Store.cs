@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class Store : Interactable
 {
-    public GameObject shopUI;
+
+    public ItemContainer storeContent;
+
+    public float buyFromPlayerMultip = 0.5f;
+    public float sellToPlayerMultip = 1.5f;
 
     public override void Interact(Character character)
     {
-        shopUI.SetActive(true);
+        Trading trading = character.GetComponent<Trading>();
+
+        if (trading == null) { return; }
+
+        trading.BeginTrading(this);
     }
 }
