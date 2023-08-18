@@ -1915,9 +1915,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 418
-        y: 845
+        y: 863
         width: 28
-        height: 49
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2431,27 +2431,6 @@ TextureImporter:
       bones: []
       spriteID: 541d15ebc96f7b546925ea80cc535b29
       internalID: -1969507217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: victorian-market_113
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 769
-        width: 64
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55045f89f15d3284d8720c7e96c19951
-      internalID: -1479693482
       vertices: []
       indices: 
       edges: []
@@ -5232,6 +5211,7 @@ TextureImporter:
       name: victorian-market_244
       rect:
         serializedVersion: 2
+<<<<<<< Updated upstream
         x: 291
         y: 801
         width: 27
@@ -5845,6 +5825,12 @@ TextureImporter:
         y: 549
         width: 95
         height: 36
+=======
+        x: 418
+        y: 846
+        width: 12
+        height: 17
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5852,6 +5838,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 9408211643b614049bbfd936fa8b1822
       internalID: -646062069
       vertices: []
@@ -5896,6 +5883,10 @@ TextureImporter:
       bones: []
       spriteID: 4bd49b1eb7ebb6649b3098cf93efba66
       internalID: -1410915621
+=======
+      spriteID: 5598ea5f8949bed40a83edafd195d1d4
+      internalID: 1425039628
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -6073,12 +6064,16 @@ TextureImporter:
       victorian-market_241: -1410505810
       victorian-market_242: -547526098
       victorian-market_243: 363759515
+<<<<<<< Updated upstream
       victorian-market_244: 836561012
       victorian-market_245: 662176100
       victorian-market_246: 361737140
       victorian-market_247: -769527659
       victorian-market_248: -1996505458
       victorian-market_249: 627375622
+=======
+      victorian-market_244: 1425039628
+>>>>>>> Stashed changes
       victorian-market_25: -753707698
       victorian-market_250: -1469040397
       victorian-market_251: 1767308732
