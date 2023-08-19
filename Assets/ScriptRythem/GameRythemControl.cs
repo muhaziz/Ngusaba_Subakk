@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameRythemControl : MonoBehaviour
@@ -39,6 +40,11 @@ public class GameRythemControl : MonoBehaviour
     public float sliderIncreaseRate = 0.05f;
     public float sliderLerpSpeed = 5.0f;
     private float intendedSliderValue;
+
+    [Header("Pause Menu")]
+    public GameObject pauseMenu; // Drag and drop your pause menu panel here via the inspector
+
+    private bool isPaused = false;
 
     private bool gameStarted = false;
 
@@ -84,6 +90,17 @@ public class GameRythemControl : MonoBehaviour
             {
                 gameTime = 0f;
                 EndGame();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
             }
         }
     }
@@ -178,5 +195,28 @@ public class GameRythemControl : MonoBehaviour
     {
         resultImageUI.gameObject.SetActive(true);
 
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f; // Just in case the game is paused, ensure the time is reset to normal
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // This reloads the current scene
+
+        currentState = GameState.Playing;
+        pauseMenu.SetActive(false);
+    }
+
+    public void PauseGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0f; // This pauses the game
+        pauseMenu.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1f; // This resumes the game
+        pauseMenu.SetActive(false);
     }
 }
