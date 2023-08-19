@@ -7,34 +7,16 @@ using UnityEngine.Video;
 public class triggerCutscene : MonoBehaviour
 {
 
-    [SerializeField] private VideoPlayer cutsceneVideo;
-    [SerializeField] private Button skipButton;
-
-    private bool hasPlayedCutscene = false;
-
-    // Dijalankan oleh CutsceneTrigger
-    public void PlayCutscene()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!hasPlayedCutscene)
+        if (collision.CompareTag("Player"))
         {
-            cutsceneVideo.Play();
-            skipButton.gameObject.SetActive(true);
-            skipButton.onClick.AddListener(SkipCutscene);
-            cutsceneVideo.loopPointReached += EndCutscene;
-            hasPlayedCutscene = true;
+            cutsceneManager manager = FindObjectOfType<cutsceneManager>();
+            if (manager)
+            {
+                manager.PlayCutscene();
+                gameObject.SetActive(false);  // Menonaktifkan trigger setelah cutscene dipicu
+            }
         }
-    }
-
-    public void SkipCutscene()
-    {
-        cutsceneVideo.Stop();
-        EndCutscene(cutsceneVideo);
-    }
-
-    private void EndCutscene(VideoPlayer vp)
-    {
-        skipButton.gameObject.SetActive(false);
-        skipButton.onClick.RemoveListener(SkipCutscene);
-        // Anda mungkin ingin menambahkan logika lain di sini, misalnya menonaktifkan trigger.
     }
 }
