@@ -32,6 +32,8 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] Light2D globalLight;
     [SerializeField] Light2D myLight;
 
+
+
     string[] dayNames = { "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu" };
     int currentDayIndex = 0;
     private int days;

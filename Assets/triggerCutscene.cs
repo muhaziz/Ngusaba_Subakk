@@ -1,43 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class triggerCutscene : MonoBehaviour
 {
-  
+
     [SerializeField] private VideoPlayer cutsceneVideo;
-    [SerializeField] private Button skipButton; // Referensi ke tombol skip cutscene
+    [SerializeField] private Button skipButton;
 
-    private bool hasPlayed = false;
+    private bool hasPlayedCutscene = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    // Dijalankan oleh CutsceneTrigger
+    public void PlayCutscene()
     {
-        if (collision.CompareTag("Player") && !hasPlayed)
+        if (!hasPlayedCutscene)
         {
-            PlayCutscene();
+            cutsceneVideo.Play();
+            skipButton.gameObject.SetActive(true);
+            skipButton.onClick.AddListener(SkipCutscene);
+            cutsceneVideo.loopPointReached += EndCutscene;
+            hasPlayedCutscene = true;
         }
     }
 
-    private void PlayCutscene()
+    public void SkipCutscene()
     {
-        cutsceneVideo.Play();
-        hasPlayed = true;
-        skipButton.gameObject.SetActive(true); // Aktifkan tombol skip saat cutscene dimulai
-        skipButton.onClick.AddListener(SkipCutscene); // Tambahkan listener ke tombol skip
-
-        cutsceneVideo.loopPointReached += DestroyTrigger;
+        cutsceneVideo.Stop();
+        EndCutscene(cutsceneVideo);
     }
 
-    private void SkipCutscene()
+    private void EndCutscene(VideoPlayer vp)
     {
-        cutsceneVideo.Stop(); // Hentikan video
-        DestroyTrigger(cutsceneVideo); // Panggil fungsi yang akan menghancurkan trigger
-    }
-
-    private void DestroyTrigger(VideoPlayer vp)
-    {
-        skipButton.gameObject.SetActive(false); // Nonaktifkan tombol skip setelah video selesai
-        skipButton.onClick.RemoveListener(SkipCutscene); // Lepaskan listener dari tombol skip
-        Destroy(this.gameObject);
+        skipButton.gameObject.SetActive(false);
+        skipButton.onClick.RemoveListener(SkipCutscene);
+        // Anda mungkin ingin menambahkan logika lain di sini, misalnya menonaktifkan trigger.
     }
 }
