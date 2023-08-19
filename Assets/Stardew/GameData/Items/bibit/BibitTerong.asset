@@ -10,15 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc7e70df9315a134f9291bcf14b02fcc, type: 3}
-  m_Name: Plow
+  m_Name: BibitTerong
   m_EditorClassIdentifier: 
-  Name: Plow
-  id: 5
-  stackable: 0
-  icon: {fileID: 21300000, guid: 10c4a5a88a6fc094694f4fce974b1e75, type: 3}
+  Name: BibitTerong
+  id: 18
+  stackable: 1
+  icon: {fileID: 21300000, guid: 04204c018f056154fae58eaa503c70d6, type: 3}
   onAction: {fileID: 0}
-  onTileMapAction: {fileID: 11400000, guid: 5bbc99f47ae0dda448b31a0056e71c9b, type: 2}
-  onItemUsed: {fileID: 0}
-  crop: {fileID: 0}
+  onTileMapAction: {fileID: 11400000, guid: 322bb0e3bc4f3c249809e9f0086ce459, type: 2}
+  onItemUsed: {fileID: 11400000, guid: 322bb0e3bc4f3c249809e9f0086ce459, type: 2}
+  crop: {fileID: 11400000, guid: d9044bb593dedcc42ac460f70e15d5e4, type: 2}
   iconHighlight: 0
   itemPrefab: {fileID: 0}
+  isWeapon: 0
+  damage: 10
+  price: 100
+  canBeSold: 1
