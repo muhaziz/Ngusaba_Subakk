@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 5
+  spritePixelsToUnits: 7
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mcpetani_6
+      name: mcpetani_jalanatas2
       rect:
         serializedVersion: 2
         x: 32
@@ -315,7 +315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mcpetani_10
+      name: mcpetani_jalanatas3
       rect:
         serializedVersion: 2
         x: 32
@@ -367,9 +367,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mcpetani_10: 1423034731
-      mcpetani_6: 950132380
       mcpetani_jalanatas1: 544470739
+      mcpetani_jalanatas2: 950132380
+      mcpetani_jalanatas3: 1423034731
       mcpetani_jalanbawah1: -505370361
       mcpetani_jalanbawah2: -1338584567
       mcpetani_jalanbawah3: 790102051
