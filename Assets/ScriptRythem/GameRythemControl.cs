@@ -47,7 +47,6 @@ public class GameRythemControl : MonoBehaviour
     private bool isPaused = false;
 
     private bool gameStarted = false;
-
     private void Awake()
     {
         if (instance == null)
@@ -57,7 +56,9 @@ public class GameRythemControl : MonoBehaviour
         }
         else if (instance != this)
         {
-            Destroy(gameObject);
+            // Jika instance lama ada, hancurkan instance yang baru ini.
+            Destroy(this.gameObject);
+            return;
         }
     }
 
@@ -185,8 +186,8 @@ public class GameRythemControl : MonoBehaviour
         }
         highscoreText.text = "Rekor Terbaik: " + highscore;
 
-        if (score >= 10) ratingText.text = "Rating: A";
-        else if (score >= 7) ratingText.text = "Rating: B";
+        if (score >= 500) ratingText.text = "Rating: A";
+        else if (score >= 100) ratingText.text = "Rating: B";
 
         ShowResult();
     }
