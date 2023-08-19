@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,6 +7,7 @@ using UnityEngine.UI;
 public class GameRythemControl : MonoBehaviour
 {
     public static GameRythemControl instance;
+
     public enum GameState
     {
         Tutorial,
@@ -17,6 +20,7 @@ public class GameRythemControl : MonoBehaviour
     [Header("Game Duration & Score")]
     public float gameTime = 60.0f;
     private float currentTime;
+    private int score;
     public int initialScore = 5;
     public int maxScore = 10;
     public GameObject resultImage;
@@ -24,7 +28,7 @@ public class GameRythemControl : MonoBehaviour
     private bool gameEnded = false;
 
     [Header("UI Components")]
-    public Image resultImageUI;  // Kita tambahkan ini dari GameRythemControl
+    public Image resultImageUI;
     public TextMeshProUGUI timerText;
     public Slider scoreSlider;
     public GameObject resultMenu;
@@ -38,6 +42,19 @@ public class GameRythemControl : MonoBehaviour
 
     private bool gameStarted = false;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         if (currentState == GameState.Tutorial)
@@ -45,20 +62,29 @@ public class GameRythemControl : MonoBehaviour
             gameStarted = false;
             return;
         }
-
         BeginGame();
     }
 
-    private void Awake()
+    private void Update()
     {
-        if (instance == null)
+        if (!gameStarted) return;
+
+        intendedSliderValue -= sliderDecreaseRate * Time.deltaTime;
+        scoreSlider.value = Mathf.MoveTowards(scoreSlider.value, intendedSliderValue, sliderLerpSpeed * Time.deltaTime);
+
+        if (scoreSlider.value <= 0 && currentState == GameState.Playing && !gameEnded)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);  // Kita tambahkan ini dari GameRythemControl
+            EndGame();
         }
-        else
+
+        if (!gameEnded)
         {
-            Destroy(gameObject);
+            gameTime -= Time.deltaTime;
+            if (gameTime <= 0f)
+            {
+                gameTime = 0f;
+                EndGame();
+            }
         }
     }
 
@@ -77,43 +103,16 @@ public class GameRythemControl : MonoBehaviour
         StartCoroutine(GameTimer());
     }
 
-    private void Update()
-    {
-        if (!gameStarted)
-            return;
-
-        intendedSliderValue -= sliderDecreaseRate * Time.deltaTime;
-        scoreSlider.value = Mathf.MoveTowards(scoreSlider.value, intendedSliderValue, sliderLerpSpeed * Time.deltaTime);
-
-        if (scoreSlider.value <= 0 && currentState == GameState.Playing && !gameEnded)
-        {
-            EndGame();
-        }
-
-        // Kode dari GameRythemControl
-        if (!gameEnded)
-        {
-            gameTime -= Time.deltaTime;
-            if (gameTime <= 0f)
-            {
-                gameTime = 0f;
-                EndGame();
-            }
-        }
-    }
-
     public void UpdateScore(int value)
     {
         score += value;
         score = Mathf.Clamp(score, 0, maxScore);
         AdjustSliderValue(value * sliderIncreaseRate);
         scoreText.text = "Score: " + score;
-
-        // Kita tambahkan ini dari GameRythemControl
         Debug.Log("Current Score: " + score);
     }
 
-    void AdjustSliderValue(float amount)
+    private void AdjustSliderValue(float amount)
     {
         intendedSliderValue += amount;
         intendedSliderValue = Mathf.Clamp(intendedSliderValue, 0, maxScore);
@@ -159,7 +158,6 @@ public class GameRythemControl : MonoBehaviour
         gameEnded = true;
         StopCoroutine("ConstantDecrease");
         StopAllCoroutines();
-
         resultMenu.SetActive(true);
 
         int highscore = PlayerPrefs.GetInt("Highscore", 0);
@@ -173,13 +171,12 @@ public class GameRythemControl : MonoBehaviour
         if (score >= 10) ratingText.text = "Rating: A";
         else if (score >= 7) ratingText.text = "Rating: B";
 
-        // Kita tambahkan ini dari GameRythemControl
         ShowResult();
     }
 
-    void ShowResult()
+    private void ShowResult()
     {
-        resultImageUI.SetActive(true);
-        // Anda bisa menambahkan lebih banyak detail seperti skor, dsb. di sini
+        resultImageUI.gameObject.SetActive(true);
+
     }
 }
