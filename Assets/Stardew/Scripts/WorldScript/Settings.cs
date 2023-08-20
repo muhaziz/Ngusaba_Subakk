@@ -70,6 +70,7 @@ public class Settings : MonoBehaviour
     {
         StartCoroutine(LoadAsynchronisly(levelName));
     }
+
     IEnumerator LoadAsynchronisly(string levelName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
