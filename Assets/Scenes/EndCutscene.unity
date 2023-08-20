@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 171303866}
   - component: {fileID: 171303871}
   - component: {fileID: 171303870}
-  - component: {fileID: 171303869}
+  - component: {fileID: 171303872}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -345,23 +345,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &171303869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171303865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41d95d253c7eb464c80ded2ea91ab4bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 171303870}
-  essentialSceneToLoad: essensial
-  mainSceneToLoad: MainScene
-  playerStartPosition: {x: 0, y: 0, z: 0}
-  player: {fileID: 0}
 --- !u!328 &171303870
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -430,6 +413,20 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &171303872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171303865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7627e48b92c64ee4c9eed0bb51dc42fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 171303870}
+  nextScene: 
 --- !u!1 &1533293259
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +680,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 171303869}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: videoToEnde, Assembly-CSharp
         m_MethodName: SkipCutscene
         m_Mode: 1
