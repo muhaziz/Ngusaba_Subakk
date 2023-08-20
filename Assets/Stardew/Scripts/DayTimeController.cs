@@ -123,11 +123,11 @@ public class DayTimeController : MonoBehaviour
     {
 
         float currentTime = Hours + Minutes / 60f;
-        Debug.Log("Current Time: " + currentTime); // Tambahkan ini untuk mengetahui waktu saat ini
+        //Debug.Log("Current Time: " + currentTime); // Tambahkan ini untuk mengetahui waktu saat ini
 
         if (currentTime >= 18f || currentTime < 6f)
         {
-            Debug.Log("Night time, activating lights."); // Tambahkan ini untuk konfirmasi
+            // Debug.Log("Night time, activating lights."); // Tambahkan ini untuk konfirmasi
             foreach (var light in nightLights)
             {
                 light.gameObject.SetActive(true);
@@ -135,7 +135,7 @@ public class DayTimeController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Day time, deactivating lights."); // Tambahkan ini untuk konfirmasi
+            // Debug.Log("Day time, deactivating lights."); // Tambahkan ini untuk konfirmasi
             foreach (var light in nightLights)
             {
                 light.gameObject.SetActive(false);
