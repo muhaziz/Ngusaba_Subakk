@@ -32,6 +32,8 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] Light2D globalLight;
     [SerializeField] Light2D myLight;
 
+    private string targetObjectName = "Lampu";
+    public GameObject targetObject;
 
 
     string[] dayNames = { "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu" };
@@ -51,6 +53,15 @@ public class DayTimeController : MonoBehaviour
     }
     private void Start()
     {
+        targetObject = GameObject.Find(targetObjectName);
+        if (targetObject != null)
+        {
+            Debug.Log("Lampu ditemukan!");
+        }
+        else
+        {
+            Debug.Log("Lampu tidak ditemukan!");
+        }
         time = startAtTime;
     }
 
@@ -93,6 +104,22 @@ public class DayTimeController : MonoBehaviour
             nextDay();
         }
         TimeAgents();
+        ControlGameObjectBasedOnTime();
+    }
+
+    private void ControlGameObjectBasedOnTime()
+    {
+        float currentTime = Hours + Minutes / 60f;
+        if (currentTime >= 18f && currentTime < 6f) // Jika saat ini antara jam 18:00 hingga 6:00
+        {
+            if (targetObject != null)
+                targetObject.SetActive(true); // Aktifkan GameObject
+        }
+        else
+        {
+            if (targetObject != null)
+                targetObject.SetActive(false); // Nonaktifkan GameObject
+        }
     }
 
     int oldPhase = 0;
