@@ -43366,7 +43366,8 @@ MonoBehaviour:
   dateText: {fileID: 655626122}
   globalLight: {fileID: 2107534270}
   myLight: {fileID: 1204747835}
-  timeScale: 60
+  targetObject: {fileID: 0}
+  timeScale: 100
   startAtTime: 28800
 --- !u!114 &1501332873
 MonoBehaviour:

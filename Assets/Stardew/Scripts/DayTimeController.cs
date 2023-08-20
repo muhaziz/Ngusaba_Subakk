@@ -34,8 +34,8 @@ public class DayTimeController : MonoBehaviour
 
     private string targetObjectName = "Lampu";
     public GameObject targetObject;
-
-
+    private List<Light> nightLights;
+    private Light2D[] nightLights2D;
     string[] dayNames = { "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu" };
     int currentDayIndex = 0;
     private int days;
@@ -53,15 +53,19 @@ public class DayTimeController : MonoBehaviour
     }
     private void Start()
     {
+        GameObject[] nightLightObjects = GameObject.FindGameObjectsWithTag("NightLight");
+
+        nightLights = new List<Light>();
+        foreach (var obj in nightLightObjects)
+        {
+            Light lightComponent = obj.GetComponent<Light>();
+            if (lightComponent != null)
+            {
+                nightLights.Add(lightComponent);
+            }
+        }
+
         targetObject = GameObject.Find(targetObjectName);
-        if (targetObject != null)
-        {
-            Debug.Log("Lampu ditemukan!");
-        }
-        else
-        {
-            Debug.Log("Lampu tidak ditemukan!");
-        }
         time = startAtTime;
     }
 
@@ -98,6 +102,14 @@ public class DayTimeController : MonoBehaviour
         time += Time.deltaTime * timeScale;
         TimeValueCalculation();
         DayLight();
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("Menekan L untuk mengaktifkan lampu");
+            foreach (var obj in nightLights)
+            {
+                GetComponent<Light>().gameObject.SetActive(true);
+            }
+        }
 
         if (time > secondsInDays)
         {
@@ -109,16 +121,25 @@ public class DayTimeController : MonoBehaviour
 
     private void ControlGameObjectBasedOnTime()
     {
+
         float currentTime = Hours + Minutes / 60f;
-        if (currentTime >= 18f && currentTime < 6f) // Jika saat ini antara jam 18:00 hingga 6:00
+        Debug.Log("Current Time: " + currentTime); // Tambahkan ini untuk mengetahui waktu saat ini
+
+        if (currentTime >= 18f || currentTime < 6f)
         {
-            if (targetObject != null)
-                targetObject.SetActive(true); // Aktifkan GameObject
+            Debug.Log("Night time, activating lights."); // Tambahkan ini untuk konfirmasi
+            foreach (var light in nightLights)
+            {
+                light.gameObject.SetActive(true);
+            }
         }
         else
         {
-            if (targetObject != null)
-                targetObject.SetActive(false); // Nonaktifkan GameObject
+            Debug.Log("Day time, deactivating lights."); // Tambahkan ini untuk konfirmasi
+            foreach (var light in nightLights)
+            {
+                light.gameObject.SetActive(false);
+            }
         }
     }
 

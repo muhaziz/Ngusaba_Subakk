@@ -12,12 +12,12 @@ public class TimeAgent : MonoBehaviour
         Init();
     }
 
-    public void Init() 
+    public void Init()
     {
         GameManager.instance.timeController.Subscribe(this);
     }
 
-    public void Invoke(DayTimeController dayTimeController) 
+    public void Invoke(DayTimeController dayTimeController)
     {
         onTimeTick?.Invoke(dayTimeController);
     }
