@@ -6510,7 +6510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685e6b364c080448b9deee7b1601225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 10000
+  Money: 100000
   Inventory: {fileID: 11400000, guid: 2fcc9cce9e76ab446af09dbeccd9f6c4, type: 2}
   playerMoneyText: {fileID: 992540548}
 --- !u!114 &242318007
