@@ -5478,7 +5478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jangan lupa menjelajahi duninya yaa banyak hal yang menarik
+  m_text: Jangan lupa menjelajahi dunianya yaa banyak hal yang menarik
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 58a51488bbf36c4469ff8af91d4e1cb0, type: 2}
   m_sharedMaterial: {fileID: -4046821162419064152, guid: 58a51488bbf36c4469ff8af91d4e1cb0, type: 2}
