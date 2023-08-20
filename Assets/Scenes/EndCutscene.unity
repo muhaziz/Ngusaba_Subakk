@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 171303870}
-  nextScene: 
+  nextScene: Credit
 --- !u!1 &1533293259
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,8 +680,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: videoToEnde, Assembly-CSharp
+      - m_Target: {fileID: 171303872}
+        m_TargetAssemblyTypeName: videotoendd, Assembly-CSharp
         m_MethodName: SkipCutscene
         m_Mode: 1
         m_Arguments:

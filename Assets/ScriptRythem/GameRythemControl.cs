@@ -189,7 +189,7 @@ public class GameRythemControl : MonoBehaviour
         highscoreText.text = "Rekor Terbaik: " + highscore;
 
         if (score >= 500) ratingText.text = "Rating: A";
-        else if (score >= 100) ratingText.text = "Rating: B";
+        else if (score >= 300) ratingText.text = "Rating: B";
 
         ShowResult();
     }
