@@ -19,4 +19,10 @@ public class videotoendd : MonoBehaviour
     {
         SceneManager.LoadScene(nextScene);
     }
+    public void SkipCutscene()
+    {
+        videoPlayer.Stop();
+        LoadScene(videoPlayer);
+    }
+
 }
