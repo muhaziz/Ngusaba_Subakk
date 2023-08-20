@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -36,6 +37,11 @@ public class GameController : MonoBehaviour
     public Slider scoreSlider;
     public GameObject resultMenu;
     public TextMeshProUGUI scoreText, highscoreText, ratingText, statisticsText;
+    public string essentialSceneToLoad;
+    public string mainSceneToLoad;
+    public Vector3 playerStartPosition;
+    public GameObject player;
+
 
     [Header("Score & Feedback")]
     public float sliderDecreaseRate = 0.05f;
@@ -49,6 +55,10 @@ public class GameController : MonoBehaviour
     public int moleMissed;
     public int redMoleHit;
 
+    [Header("Pause Menu")]
+    public GameObject pauseMenu; // Drag and drop your pause menu panel here via the inspector
+
+    private bool isPaused = false;
     private bool gameStarted = false; // Untuk mengetahui apakah game sudah dimulai atau belum
 
     private void Start()
@@ -101,6 +111,17 @@ public class GameController : MonoBehaviour
         if (scoreSlider.value <= 0 && currentState == GameState.Playing && !gameEnded)
         {
             EndGame();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
         }
     }
 
@@ -209,4 +230,35 @@ public class GameController : MonoBehaviour
     {
         redMoleHit++;
     }
+
+    public void ChangeScene()
+    {
+
+        SceneManager.LoadScene(essentialSceneToLoad);
+        SceneManager.LoadScene(mainSceneToLoad, LoadSceneMode.Additive);
+
+        // Pindahkan player ke posisi awal setelah scene di-load
+        player.transform.position = playerStartPosition;
+    }
+    public void RestartScene()
+    {
+
+        SceneManager.LoadScene("Challange1");
+
+    }
+
+    public void PauseGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0f; // This pauses the game
+        pauseMenu.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1f; // This resumes the game
+        pauseMenu.SetActive(false);
+    }
+
 }

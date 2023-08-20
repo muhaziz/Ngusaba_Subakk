@@ -15,8 +15,6 @@ public class Settings : MonoBehaviour
     public Toggle fullscreenToggle;
     public TMP_Dropdown graphicsQualityDropdown;
     public Slider audioVolumeSlider;
-    public Slider sfxVolumeSlider;
-    public Slider bgmVolumeSlider;
     public AudioMixer audioMixer;
 
     private Resolution[] resolutions;
@@ -91,10 +89,7 @@ public class Settings : MonoBehaviour
         LoadResolutions();
         LoadQualityLevels();
         LoadAudioVolume();
-        LoadSFXVolume();
-        LoadBGMVolume();
-
-
+        SetAudioVolume(audioVolumeSlider.value);
     }
 
     public void SetResolution(int resolutionIndex)
@@ -118,8 +113,8 @@ public class Settings : MonoBehaviour
 
     public void SetAudioVolume(float volume)
     {
-        audioMixer.SetFloat("MasterVolume", volume);
-        //Debug.Log("Audio volume set to " + volume);
+        float dBVolume = LinearToDecibel(volume);
+        audioMixer.SetFloat("MasterVolume", dBVolume);
     }
 
     private void LoadResolutions()
@@ -162,32 +157,14 @@ public class Settings : MonoBehaviour
         audioMixer.GetFloat("MasterVolume", out volume);
         audioVolumeSlider.value = volume;
     }
-
-    public void SetSFXVolume(float volume)
+    public float LinearToDecibel(float linear)
     {
-        audioMixer.SetFloat("SFXVolume", volume);
-        //Debug.Log("SFX volume set to " + volume);
+        if (linear != 0)
+            return 20.0f * Mathf.Log10(linear);
+        else
+            return -144.0f; // return nilai minimum dari dB di Unity
     }
 
-    public void SetBGMVolume(float volume)
-    {
-        audioMixer.SetFloat("BGMVolume", volume);
-        //Debug.Log("BGM volume set to " + volume);
-    }
-
-    private void LoadSFXVolume()
-    {
-        float volume;
-        audioMixer.GetFloat("SFXVolume", out volume);
-        sfxVolumeSlider.value = volume;
-    }
-
-    private void LoadBGMVolume()
-    {
-        float volume;
-        audioMixer.GetFloat("BGMVolume", out volume);
-        bgmVolumeSlider.value = volume;
-    }
 
 }
 

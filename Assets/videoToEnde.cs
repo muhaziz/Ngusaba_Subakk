@@ -6,7 +6,7 @@ using UnityEngine.Video;
 
 public class videoToEnde : MonoBehaviour
 {
-     public VideoPlayer videoPlayer;
+    public VideoPlayer videoPlayer;
     public string essentialSceneToLoad;
     public string mainSceneToLoad;
     public Vector3 playerStartPosition;
@@ -25,5 +25,11 @@ public class videoToEnde : MonoBehaviour
         // Pindahkan player ke posisi awal setelah scene di-load
         player.transform.position = playerStartPosition;
     }
+    public void SkipCutscene()
+    {
+        videoPlayer.Stop();
+        LoadScene(videoPlayer);
+    }
+
 }
 

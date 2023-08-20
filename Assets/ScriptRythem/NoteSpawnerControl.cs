@@ -17,6 +17,10 @@ public class NoteSpawnerControl : MonoBehaviour
 
     private void Update()
     {
+        if (GameRythemControl.instance.currentState != GameRythemControl.GameState.Playing ||
+      GameRythemControl.instance.currentState == GameRythemControl.GameState.Ended)
+            return;
+
         timeSinceLastSpawn += Time.deltaTime;
 
         if (timeSinceLastSpawn >= nextSpawnInterval)

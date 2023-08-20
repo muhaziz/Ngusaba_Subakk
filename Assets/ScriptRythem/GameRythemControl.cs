@@ -74,7 +74,9 @@ public class GameRythemControl : MonoBehaviour
 
     private void Update()
     {
-        if (!gameStarted) return;
+        if (currentState != GameState.Playing) return;  // Tambahkan baris ini
+
+        //  if (!gameStarted) return;
 
         intendedSliderValue -= sliderDecreaseRate * Time.deltaTime;
         scoreSlider.value = Mathf.MoveTowards(scoreSlider.value, intendedSliderValue, sliderLerpSpeed * Time.deltaTime);
@@ -172,7 +174,7 @@ public class GameRythemControl : MonoBehaviour
     private void EndGame()
     {
         if (gameEnded) return;
-
+        currentState = GameState.Ended;
         gameEnded = true;
         StopCoroutine("ConstantDecrease");
         StopAllCoroutines();
