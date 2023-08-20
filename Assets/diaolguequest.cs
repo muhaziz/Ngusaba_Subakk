@@ -19,12 +19,16 @@ public class diaolguequest : MonoBehaviour
             dialogueText.text = dialogueContainer.line[0];
         }
 
-        SceneManager.LoadScene("NextScene");
+
     }
 
     public void stopQuest()
     {
         Dialoguepanel.SetActive(false);
         //inventoryPanel.SetActive(false);
+    }
+    public void SwitchScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -7,7 +7,7 @@ public class questinteract : Interactable
     public override void Interact(Character character)
     {
 
-        diaolguequest dialogue = character.GetComponent<diaolguequest>();
+        DialogueQuest2 dialogue = character.GetComponent<DialogueQuest2>();
 
         if (dialogue == null) { return; }
 
