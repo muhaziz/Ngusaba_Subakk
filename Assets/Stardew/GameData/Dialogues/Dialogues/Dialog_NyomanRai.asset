@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ad140854d396fa479715d217dcc1700, type: 3}
-  m_Name: New Dialogue Container 2
+  m_Name: Dialog_NyomanRai
   m_EditorClassIdentifier: 
   line:
-  - Test dialogue 2
-  - This is second dialogue for testing purposes.
-  actor: {fileID: 11400000, guid: 58bfa22d9d54ce6498e8914dc0bc9620, type: 2}
+  - Halo, saya Nyoman Rai Ada yang bisa saya bantu?
+  actor: {fileID: 11400000, guid: 9cc443fbac4c8b545bdb35a7fac9fcca, type: 2}
