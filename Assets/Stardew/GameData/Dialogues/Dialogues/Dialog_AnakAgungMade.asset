@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ad140854d396fa479715d217dcc1700, type: 3}
-  m_Name: New Dialogue Container
+  m_Name: Dialog_AnakAgungMade
   m_EditorClassIdentifier: 
   line:
-  - 'First line fsgdegdsg dgdf dtfshfh yh '
-  - Second line gfhsnf hynfynfy nyn y
-  - Third line fhsjnt ndtynfyn gfyn dfyn gfynfy
-  actor: {fileID: 11400000, guid: 58bfa22d9d54ce6498e8914dc0bc9620, type: 2}
+  - Izinkan saya memperkenalkan diri,
+  - 'Saya Anak Agung Made senang bertemu dengan anda '
+  actor: {fileID: 11400000, guid: 016ba8543b45dc24cb6dab93ce33b558, type: 2}
