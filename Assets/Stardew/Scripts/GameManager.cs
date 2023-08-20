@@ -19,4 +19,5 @@ public class GameManager : MonoBehaviour
     public OnScreenMessageSystem messageSystem;
     public ScreenTint screenTint;
     public Player player1;
+
 }
