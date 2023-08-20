@@ -3,17 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueSystem : MonoBehaviour
 {
-    [SerializeField] Text targetText;
-    [SerializeField] Text nameText;
+    [SerializeField] TextMeshProUGUI targetText;
+    [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] Image portrait;
 
     DialogueContainer currentDialogue;
     int currentTextLine;
 
-    [Range(0f,1f)]
+    [Range(0f, 1f)]
     [SerializeField] float visibleTextPercent;
     [SerializeField] float timePerLetter = 0.05f;
     float totalTimeToType, currentTime;
@@ -21,7 +22,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(0))
         {
             PushText();
         }
@@ -37,7 +38,7 @@ public class DialogueSystem : MonoBehaviour
         UpdateText();
     }
 
-    void UpdateText() 
+    void UpdateText()
     {
         int letterCount = (int)(lineToShow.Length * visibleTextPercent);
         targetText.text = lineToShow.Substring(0, letterCount);
@@ -45,7 +46,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void PushText()
     {
-        if (visibleTextPercent < 1f) 
+        if (visibleTextPercent < 1f)
         {
             visibleTextPercent = 1f;
             UpdateText();
@@ -56,12 +57,13 @@ public class DialogueSystem : MonoBehaviour
         {
             Conclude();
         }
-        else {
+        else
+        {
             CycleLine();
         }
     }
 
-    void CycleLine() 
+    void CycleLine()
     {
         lineToShow = currentDialogue.line[currentTextLine];
         totalTimeToType = lineToShow.Length * timePerLetter;
@@ -72,7 +74,7 @@ public class DialogueSystem : MonoBehaviour
         currentTextLine += 1;
     }
 
-    public void Initialize(DialogueContainer dialogueContainer) 
+    public void Initialize(DialogueContainer dialogueContainer)
     {
         Show(true);
         currentDialogue = dialogueContainer;
