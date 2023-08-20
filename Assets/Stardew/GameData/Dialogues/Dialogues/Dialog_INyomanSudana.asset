@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad140854d396fa479715d217dcc1700, type: 3}
   m_Name: Dialog_INyomanSudana
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - ' Permisi, perkenalkan saya I Nyoman Sudana.'
+  - Apakah anda membutuhkan orang untuk membantu? kebetulan saya sedang mencari pekerjaan
+  actor: {fileID: 11400000, guid: 7ac1e3c2a0d4947469c7f2f3bd986f5e, type: 2}

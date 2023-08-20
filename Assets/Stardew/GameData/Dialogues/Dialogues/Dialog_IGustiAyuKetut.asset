@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad140854d396fa479715d217dcc1700, type: 3}
   m_Name: Dialog_IGustiAyuKetut
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - 'Permisi Kakak, Apakah tanaman itu milikmu? perkenalkan saya I Gusti Ayu Ketut '
+  actor: {fileID: 11400000, guid: 98269968265ea5e4a9b207363b0f9f49, type: 2}

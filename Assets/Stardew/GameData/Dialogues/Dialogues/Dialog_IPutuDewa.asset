@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad140854d396fa479715d217dcc1700, type: 3}
   m_Name: Dialog_IPutuDewa
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - 
+  - 
+  actor: {fileID: 11400000, guid: fd37f859ca311cf40b9193ef2f495756, type: 2}

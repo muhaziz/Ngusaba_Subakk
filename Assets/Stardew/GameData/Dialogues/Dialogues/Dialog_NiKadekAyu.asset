@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad140854d396fa479715d217dcc1700, type: 3}
   m_Name: Dialog_NiKadekAyu
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - Hai kak! kamu orang barunya disini? aku baru melihatmu. kenalin aku Ni Kadek
+    Ayu salam kenal kak!
+  actor: {fileID: 11400000, guid: 2a9d86ba7448893489f3e997f6c4a5be, type: 2}

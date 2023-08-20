@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad140854d396fa479715d217dcc1700, type: 3}
   m_Name: Dialog_NiMadeRai
   m_EditorClassIdentifier: 
-  line: []
-  actor: {fileID: 0}
+  line:
+  - Hai nak, apakah kamu sudah makan siang? sini mampirlah kerumahku
+  actor: {fileID: 11400000, guid: b057dff4bc315f943a45614e7efdfa52, type: 2}
